@@ -40,7 +40,8 @@ for the complete build brief. Check the source before you change behavior.
    discoveries, and activity progress. Validate old saves when changing their format.
 5. Keep the La Terreta name. Keep DONA and HOME unchanged in all languages. Do not
    restore the removed wave action. Translate new visible text in all three languages.
-6. Keep audio off at startup. Preserve mute, pause, photo, globe, and hidden-tab
+6. Enable sound by default; start audio when the player chooses a character.
+   Preserve mute, pause, photo, globe, and hidden-tab
    behavior. Resume without duplicate audio sources.
 7. Asset names, pivots, skeletons, and animation clips are runtime contracts. Check
    the loader and builder together before changing them. Preserve unrelated binary

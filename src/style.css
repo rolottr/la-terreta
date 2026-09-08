@@ -2339,12 +2339,15 @@ body[data-started="true"][data-view="globe"] #photo { display: none; }
 .top-actions { margin-left: auto; }
 .welcome .brand { width: fit-content; font-size: clamp(56px, 6vw, 92px); gap: 18px; margin-bottom: 32px; }
 .welcome .brand .orange-mark { display: block; flex: 0 0 auto; width: 44px; height: 44px; }
-.welcome .brand-sub { display: block; font-size: 14px; letter-spacing: 3px; margin-top: 12px; }
+.welcome .brand-sub { display: flex; align-items: baseline; gap: 14px; font-size: 11px; letter-spacing: 1.5px; margin-top: 12px; }
+.welcome .brand-name { font-size: 26px; font-weight: 500; letter-spacing: -0.5px; }
+.welcome .brand-tagline { white-space: nowrap; }
 .welcome .explorer-intro { max-width: 370px; justify-content: space-between; gap: 20px; }
 .welcome .explorer-intro .welcome-note { margin: 0; flex-shrink: 0; }
 @media (max-width: 700px) {
   .welcome .brand { font-size: 50px; gap: 14px; margin-bottom: 22px; }
-  .welcome .brand-sub { font-size: 12px; letter-spacing: 2px; margin-top: 8px; }
+  .welcome .brand-sub { font-size: 9px; letter-spacing: 1px; gap: 10px; margin-top: 8px; }
+  .welcome .brand-name { font-size: 20px; }
   .welcome .explorer-intro { max-width: none; }
 }
 @media (max-height: 500px) and (orientation: landscape) {
@@ -2389,7 +2392,8 @@ body[data-started="true"][data-view="globe"] #photo { display: none; }
   #welcome.welcome { inset:0; width:100%; height:100%; max-width:none; max-height:none; margin:0; padding:0; border:0; border-radius:0; background:none; box-shadow:none; overflow:visible; pointer-events:none; }
   #welcome .brand { position:absolute; top:max(76px,11dvh); left:50%; transform:translateX(-50%); margin:0; font-size:clamp(48px,16vw,68px); gap:12px; white-space:nowrap; pointer-events:auto; }
   #welcome .brand .orange-mark { width:42px; height:42px; }
-  #welcome .brand-sub { display:block; font-size:11px; letter-spacing:2px; margin-top:8px; }
+  #welcome .brand-sub { display:flex; font-size:8px; letter-spacing:1px; gap:10px; margin-top:8px; }
+  #welcome .brand-name { font-size:20px; }
   #welcome .hero-choice { position:absolute; bottom:max(64px,12dvh,env(safe-area-inset-bottom)); left:50%; transform:translateX(-50%); width:min(340px,calc(100% - 48px)); max-width:none; margin:0; padding:0; pointer-events:auto; }
   #welcome .hero-portrait { height:clamp(88px,14dvh,130px); }
   #welcome .hero-portrait img { height:clamp(112px,18dvh,166px); }
@@ -2399,7 +2403,8 @@ body[data-started="true"][data-view="globe"] #photo { display: none; }
 @media (max-height:500px) and (orientation:landscape) {
   #welcome .brand { top:12px; font-size:34px; gap:10px; }
   #welcome .brand .orange-mark { width:28px; height:28px; }
-  #welcome .brand-sub { font-size:9px; margin-top:4px; }
+  #welcome .brand-sub { font-size:7px; letter-spacing:0.7px; gap:8px; margin-top:4px; }
+  #welcome .brand-name { font-size:16px; }
   #welcome .hero-choice { bottom:12px; width:260px; }
   #welcome .hero-portrait { height:54px; }
   #welcome .hero-portrait img { height:78px; }

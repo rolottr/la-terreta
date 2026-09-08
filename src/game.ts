@@ -79,7 +79,7 @@ export class Game {
     if (!value && this.activities.active?.kind === "photograph") this.activities.cancel(true);
     this.snapCamera = true;
   }
-  sound = false;
+  sound = true;
   quality = "balanced";
   x = this.state.x;
   z = this.state.z;
@@ -207,6 +207,7 @@ export class Game {
     this.save(); this.onEvent("toast", t("The Fallas procession. Turn sound on to hear the band."));
   }
   start() {
+    if (this.sound) this.startSound();
     this.snapCamera = true;
     this.started = true;
     this.globe = false;
@@ -681,15 +682,18 @@ export class Game {
     this.renderer.shadowMap.enabled = value !== "low";
     this.onChange();
   }
+  private startSound() {
+    this.audio ??= new AudioContext();
+    this.music ??= new GameMusic(this.audio);
+    this.localSound ??= new LocalSound(this.audio, this.music.output);
+    void Promise.all([this.audio.resume(), this.music.load(), this.localSound.load()]).catch(() => {
+      this.onEvent("toast", t("Music could not load. Turn sound off and on to try again."));
+    });
+  }
   toggleSound() {
     this.sound = !this.sound;
     if (this.sound) {
-      this.audio ??= new AudioContext();
-      this.music ??= new GameMusic(this.audio);
-      this.localSound ??= new LocalSound(this.audio, this.music.output);
-      void Promise.all([this.audio.resume(), this.music.load(), this.localSound.load()]).catch(() => {
-        this.onEvent("toast", t("Music could not load. Turn sound off and on to try again."));
-      });
+      this.startSound();
     } else {
       this.music?.setEnabled(false);
       this.localSound?.setEnabled(false);

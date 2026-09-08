@@ -96,8 +96,8 @@ not sync between devices or between different site addresses.
 
 ## Sound and graphics
 
-Sound starts off. Turn it on to hear city and forest music, local sounds, and
-the moving Fallas band. The band becomes clearer as you approach and the
+Sound is enabled by default and starts when you choose DONA or HOME. You hear
+city and forest music, local sounds, and the moving Fallas band. The band becomes clearer as you approach and the
 background music fades down. Mute, pause, photo mode, globe view, and a hidden
 browser tab control the sound mix.
 
