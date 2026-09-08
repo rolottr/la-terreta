@@ -8,7 +8,8 @@ residents, and complete eight local activities at your own pace.
 
 Built with TypeScript, Three.js, Vite, and original Blender models. The game
 runs in the browser. Models, textures, fonts, and sound ship with the project.
-No backend or runtime API key is required.
+No backend or secret API key is required. Optional PostHog analytics uses a
+public project token.
 
 ## Run locally
 
@@ -104,6 +105,41 @@ Light, Balanced, and High settings change render cost. Distant models use less
 geometry. The build compresses models without reducing their detail. Colour
 images use a small quality reduction to reduce download size.
 Sound effects use lossless FLAC. Music keeps its original MP3 encoding.
+
+## Game analytics
+
+PostHog collects events on the production domains only. Set `VITE_POSTHOG_TOKEN`
+and `VITE_POSTHOG_HOST` in the Vercel production environment before building.
+Use the public project token, never a personal or secret API key. `.env.example`
+lists the settings. A local `.env.local` file is ignored by Git.
+
+The SDK ships with the game. Automatic click capture, session recording, surveys,
+and person profiles are off. A random browser ID uses local storage to estimate
+unique and returning players. Browser storage resets and different devices can
+count the same person again. Do Not Track is respected. Collection failures do
+not stop play or change saved progress.
+
+| Event | Meaning |
+| --- | --- |
+| `game_started` | Play started once on this page, with a new `game_session_id` |
+| `game_play_time` | `active_seconds` since the last report; sum these for play time |
+| `place_discovered` | A new place ID was added to the travel book |
+| `activity_started` | An activity began, including a bike or boat trip |
+| `activity_completed` | A task reached its target for the first time in this save |
+| `transport_changed` | Travel mode changed: walk, bike, tram, or boat |
+| `memory_discovered` | A new memory was saved |
+| `photo_taken` | A photo was made; no image is sent |
+| `all_places_discovered` | All 11 places were found |
+
+The timer stops while paused or hidden, and after 60 seconds without input.
+Held movement keys and touch controls count as input. Reports are sent each
+60 seconds and when play stops or transport changes. Closing a browser can lose
+the final report. `session_active_seconds` is cumulative; do not sum it.
+Old discoveries and completed tasks are not sent again when a save loads.
+
+Filter dashboards to `environment = production`. Local analytics is off unless
+started with `VITE_POSTHOG_TEST_MODE=true npm run dev`; these events have
+`environment = test`. Preview deployments do not collect events.
 
 ## Check the project
 

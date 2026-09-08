@@ -6,6 +6,7 @@ import { assetUrl } from "./public-assets";
 import { loadActivityAssets } from "./activity-scene";
 import { World } from "./world";
 import { Game } from "./game";
+import { initializeGameAnalytics } from "./game-analytics";
 import { R } from "./data";
 import { loadWetland } from "./wetland";
 import { loadCraftedProps } from "./crafted-props";
@@ -83,6 +84,7 @@ async function main() {
   const world = new World(scene);
   const game = new Game(world, camera, renderer, sun);
   const ui = new UI(game);
+  const analytics = initializeGameAnalytics(game);
   if (import.meta.env.DEV)
     Object.assign(window, { valencia: { game, world, renderer, camera, characters: { getCharacterRig, animateCharacter, createCharacter } } });
   await world.models();
@@ -126,6 +128,7 @@ async function main() {
       else camera.clearViewOffset();
     }
     game.step(dt);
+    analytics?.step();
     const phase = game.environment.values;
     sky.update(camera, game.time, phase);
     sun.color.copy(phase.sun);sun.intensity=phase.sunIntensity;

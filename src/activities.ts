@@ -31,7 +31,7 @@ export class Activities {
   scene!: ActivityScene;
   private repeatAfter=0;
   initialize(){this.scene=new ActivityScene(this.game);}
-  credit(id:TaskId,amount:number){const g=this.game;if(addProgress(g.state.activities,id,amount)){g.save();g.chime();g.onEvent("toast",t("Activity complete: {activity}",{activity:t(activityCatalogue.find(task=>task.id===id)!.name)}));g.onChange();}}
+  credit(id:TaskId,amount:number){const g=this.game;if(addProgress(g.state.activities,id,amount)){g.save();g.chime();g.onEvent("activity-completed",id);g.onEvent("toast",t("Activity complete: {activity}",{activity:t(activityCatalogue.find(task=>task.id===id)!.name)}));g.onChange();}}
   private cup = new T.Mesh(
     new T.CylinderGeometry(0.065, 0.045, 0.18, 12),
     solid("#eee1bc"),
@@ -93,6 +93,7 @@ export class Activities {
     if(kind==='firecracker'&&(g.processionClock<this.repeatAfter||!this.scene.prepareThrow()))return;
     if(kind==='falla'){
       g.photo=true;
+      g.onEvent("activity-started", kind);
       g.yaw=Math.atan2(g.x-civicFallaCenter.x,g.z-civicFallaCenter.z);
       g.selfiePitch=-.34;g.selfieZoom=2.3;g.selfieLift=.15;g.onEvent('photo');return;
     }
@@ -110,6 +111,7 @@ export class Activities {
       completed: false,
       target: fruit??undefined,
     };
+    g.onEvent("activity-started", kind);
     if(kind!=="procession")g.resetInput();
     if (kind === "waterside") {
       g.x = waterSeat.x;
@@ -159,6 +161,7 @@ export class Activities {
     if (g.state.memories.includes(id)) return;
     g.state.memories.push(id);
     g.save();
+    g.onEvent("memory-saved", id);
     if(quiet)return;
     g.chime();
     g.onEvent(
