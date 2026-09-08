@@ -59,6 +59,7 @@ export class GameAnalytics {
     if (kind === "start" && !this.sessionId) {
       this.sessionId = crypto.randomUUID();
       this.lastTick = this.lastInput = this.lastReport = performance.now();
+      this.wasActive = !this.game.paused && !document.hidden;
       this.send("game_started", {
         saved_places: this.game.visited.size,
         saved_activities: this.game.state.activities.completed.length,
