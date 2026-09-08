@@ -46,6 +46,7 @@ import { stationCollider } from "./landmark-collision";
 import { CivicPlaza } from "./civic-plaza";
 import { FieldLife } from "./field-life";
 import { GardenFlowers } from "./garden-flowers";
+import { FieldFlag } from "./field-flag";
 export { createBike, createPerson } from "./actors";
 export interface Collider {
   x: number;
@@ -59,6 +60,7 @@ export interface Collider {
 export class World {
   group = new T.Group();
   flowers = new GardenFlowers();
+  private fieldFlag?: FieldFlag;
   colliders: Collider[] = [];
   private scienceCollisions: BuildingCollision[] = [];
   water: T.Mesh[] = [];
@@ -295,6 +297,7 @@ export class World {
     }
   }
   async models() {
+    this.fieldFlag = await FieldFlag.load(this);
     const loader = new GLTFLoader();
     const [landmarks, village, distantVillage] = await Promise.all([
       loader.loadAsync("/models/landmarks.glb"),
@@ -650,6 +653,7 @@ export class World {
       m.children[1].rotation.y = t;
     });
     this.procession?.update(processionTime, this.viewer, this.distantView);
+    this.fieldFlag?.update(processionTime);
     const actors = [...this.people, ...(this.procession?.members.map(m => m.person) || [])];
     if (player) actors.push(player);
     this.footShadows.update(actors, this.ground);

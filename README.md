@@ -231,6 +231,7 @@ Build only the asset family you change. The main entry points are:
 | Garden animals and flowers | `build_garden_life.py` |
 | Tram, bull, and water texture | `build_scene_improvements.py` |
 | Local activity props | `build_activity_assets.py` |
+| Field flag and wind animation | `build_field_flag.py` |
 
 After rebuilding landmarks or the village, run `apply_materials.py`. Use
 `-- --landmarks-only` when only landmarks changed. Run `build_lod.py` after a

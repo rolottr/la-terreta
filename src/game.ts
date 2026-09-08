@@ -701,30 +701,34 @@ export class Game {
     this.onChange();
   }
   chime() {
-    if (!this.sound || !this.audio || !this.music || this.paused || this.globe || document.hidden) return;
+    if (!this.sound || !this.started || !this.audio || !this.music || this.paused || this.globe || this.photo || document.hidden) return;
     if (this.audio.currentTime < this.chimeUntil) return;
-    this.chimeUntil = this.audio.currentTime + .35;
-    for (const [i, f] of [523.25, 659.25, 783.99].entries()) {
+    const now = this.audio.currentTime;
+    // A quiet, low cue. Reserve its full tail so discoveries cannot stack it.
+    this.chimeUntil = now + 1.1;
+    for (const [i, f] of [261.63, 329.63, 392].entries()) {
+      const start = now + i * .1;
       const o = this.audio.createOscillator(),
         gain = this.audio.createGain();
       o.type = "sine";
       o.frequency.value = f;
-      gain.gain.setValueAtTime(0, this.audio.currentTime);
+      gain.gain.setValueAtTime(0, start);
       gain.gain.linearRampToValueAtTime(
-        0.045,
-        this.audio.currentTime + i * 0.07 + 0.02,
+        0.012,
+        start + 0.08,
       );
       gain.gain.exponentialRampToValueAtTime(
         0.0001,
-        this.audio.currentTime + i * 0.07 + 0.8,
+        start + 0.8,
       );
       o.connect(gain).connect(this.music.output);
-      o.start(this.audio.currentTime + i * 0.07);
-      o.stop(this.audio.currentTime + i * 0.07 + 0.9);
+      gain.gain.linearRampToValueAtTime(0, start + .9);
+      o.start(start);
+      o.stop(start + .9);
       o.onended = () => { o.disconnect(); gain.disconnect(); };
     }
   }
-  photoDownload() {
+  captureSelfie() {
     if (!this.photo) return;
     this.step(0);
     this.capture();
@@ -748,18 +752,11 @@ export class Game {
     ctx.fillRect(0, 0, photo.width, photo.height);
     ctx.drawImage(source, 0, 0);
     const data = photo.toDataURL("image/png");
-    const a = document.createElement("a");
-    a.download = `la-terreta-selfie-${this.nearestPlace().id}.png`;
-    a.href = data;
-    a.style.display = "none";
-    document.body.appendChild(a);
-    a.click();
-    a.remove();
     this.onEvent("photo-ready", data);
     const requestResult = this.activities.photoTaken();
     this.onEvent(
       "toast",
-      requestResult === false ? t(distance(this,{x:98,z:9})<30?"Keep yourself and the Falla in view.":"Keep both Serranos towers in the photo. Turn towards the gate and try again.") : t("Your photo is ready. Use the preview to save it again."),
+      requestResult === false ? t(distance(this,{x:98,z:9})<30?"Keep yourself and the Falla in view.":"Keep both Serranos towers in the photo. Turn towards the gate and try again.") : t("Your photo is ready. Press the photo to download it."),
     );
   }
 

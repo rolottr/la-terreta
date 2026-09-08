@@ -111,7 +111,7 @@ export const messages = {
   "Explorer saved.": ["Personaje guardado.", "Personatge guardat."],
   "Selfie": ["Selfie", "Selfie"],
   "Selfie mode": ["Modo selfie", "Mode selfie"],
-  "Save selfie": ["Guardar selfie", "Guardar selfie"],
+  "Take selfie": ["Hacer selfie", "Fer selfie"],
   "Afternoon": ["Tarde", "Vesprada"],
   "Sunset": ["Puesta de sol", "Posta de sol"],
   "Evening": ["Anochecer", "Capvespre"],
@@ -748,9 +748,9 @@ export const messages = {
     "Este navegador no puede guardar tu diario. Puedes seguir jugando.",
     "Este navegador no pot guardar el teu diari. Pots continuar jugant."
   ],
-  "Your photo is ready. Use the preview to save it again.": [
-    "Tu foto está lista. Usa la vista previa para guardarla otra vez.",
-    "La teua foto està preparada. Usa la vista prèvia per a guardar-la una altra vegada."
+  "Your photo is ready. Press the photo to download it.": [
+    "Tu foto está lista. Pulsa la foto para descargarla.",
+    "La teua foto està preparada. Prem la foto per a descarregar-la."
   ],
   "The graphics view stopped. Reload the page to return to your saved journal.": [
     "La vista gráfica se ha detenido. Recarga la página para volver a tu diario guardado.",

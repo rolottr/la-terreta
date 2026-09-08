@@ -91,7 +91,7 @@ export class UI {
   <aside class="mini"><button id="mini-map" aria-label="${t("Open map")}"><canvas id="minimap" width="260" height="260"></canvas><span class="mini-north">N</span></button></aside>
   <div id="touch-controls"><div class="joystick-wrap"><button id="joystick" aria-label="${t("Move")}"><span class="joystick-track" aria-hidden="true">＋</span><span class="joystick-knob" aria-hidden="true"></span></button></div><div class="touch-actions"><button id="touch-bell" aria-label="${t("Bicycle bell")}" hidden>${icon("bell")}</button><button id="touch-bike" aria-label="${t("Borrow / park bike")}">${icon("bike")}</button><button id="touch-e" aria-label="${t("Use")}">${icon("hand")}</button></div></div>
  </div>
- <div id="photo-ui" hidden><div class="photo-title">LA TERRETA <span>${t("A LITTLE WORLD")}</span></div><div class="photo-corner tl"></div><div class="photo-corner tr"></div><div class="photo-corner bl"></div><div class="photo-corner br"></div><a id="photo-preview" hidden download="la-terreta-postcard.png" aria-label="${t("Download your photo")}"><img alt="${t("Your captured Valencia photo")}"/><span>${t("Download photo ↗")}</span></a><div class="selfie-controls" aria-label="${t("Camera movement")}"><p>${t("Drag to look up and down. Scroll or pinch to zoom.")}</p><button type="button" id="selfie-pad" aria-label="${t("Camera movement")}"><span class="selfie-pad-ring" aria-hidden="true"></span><span class="selfie-pad-knob" aria-hidden="true">${icon("camera")}</span></button></div><div class="photo-tools"><button id="capture" class="primary">${icon("camera")} ${t("Save selfie")}</button><button id="exit-photo" class="paper-btn">${t("Back to exploring")} <kbd>P</kbd></button></div></div>
+ <div id="photo-ui" hidden><div class="photo-title">LA TERRETA <span>${t("A LITTLE WORLD")}</span></div><div class="photo-corner tl"></div><div class="photo-corner tr"></div><div class="photo-corner bl"></div><div class="photo-corner br"></div><a id="photo-preview" hidden download="la-terreta-postcard.png" aria-label="${t("Download your photo")}"><img alt="${t("Your captured Valencia photo")}"/><span>${t("Download photo ↗")}</span></a><div class="selfie-controls" aria-label="${t("Camera movement")}"><p>${t("Drag to look up and down. Scroll or pinch to zoom.")}</p><button type="button" id="selfie-pad" aria-label="${t("Camera movement")}"><span class="selfie-pad-ring" aria-hidden="true"></span><span class="selfie-pad-knob" aria-hidden="true">${icon("camera")}</span></button></div><div class="photo-tools"><button id="capture" class="primary">${icon("camera")} ${t("Take selfie")}</button><button id="exit-photo" class="paper-btn">${t("Back to exploring")} <kbd>P</kbd></button></div></div>
  <button type="button" id="toast" aria-live="polite" hidden></button>
  <div id="modal-layer" hidden></div>`;
   }
@@ -159,7 +159,7 @@ export class UI {
       this.game.photo = false;
       this.event("photo");
     });
-    on("capture", () => this.game.photoDownload());
+    on("capture", () => this.game.captureSelfie());
     const pad = document.querySelector<HTMLButtonElement>("#selfie-pad")!;
     const knob = pad.querySelector<HTMLElement>(".selfie-pad-knob")!;
     let pointer: number | undefined, x = 0, y = 0;

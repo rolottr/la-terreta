@@ -39,10 +39,30 @@ export class GameMusic {
   constructor(private audio: AudioContext) {
     this.output = audio.createGain();
     this.output.gain.value = 0;
+    // Every sound passes through this chain, including effects and chimes.
+    // Roll off piercing highs without adding a resonant peak at the cutoff.
+    const treble = [audio.createBiquadFilter(), audio.createBiquadFilter()];
+    for (const filter of treble) {
+      filter.type = "lowpass";
+      filter.frequency.value = 4000;
+      filter.Q.value = Math.SQRT1_2;
+    }
     const limiter = audio.createDynamicsCompressor();
     limiter.threshold.value = -3; limiter.knee.value = 0; limiter.ratio.value = 20;
     limiter.attack.value = .002; limiter.release.value = .18;
-    this.output.connect(limiter).connect(audio.destination);
+    // A compressor can overshoot during its attack. Bound the final samples
+    // too, with a smooth knee and 12 dB of headroom below digital full scale.
+    const ceiling = audio.createWaveShaper();
+    ceiling.curve = Float32Array.from({ length: 4097 }, (_, i) => {
+      const x = i / 2048 - 1;
+      const magnitude = Math.abs(x);
+      return magnitude <= .25 ? x :
+        Math.sign(x) * (.25 + .25 * Math.tanh((magnitude - .25) / .25));
+    });
+    const level = audio.createGain();
+    level.gain.value = .5;
+    this.output.connect(treble[0]).connect(treble[1]).connect(limiter)
+      .connect(ceiling).connect(level).connect(audio.destination);
     this.gains = { city: audio.createGain(), forest: audio.createGain(), band: audio.createGain() };
     this.bandFilter = audio.createBiquadFilter();
     this.bandFilter.type = "lowpass";
