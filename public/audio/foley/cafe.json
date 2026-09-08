@@ -1,0 +1,8 @@
+{
+  "provider": "ElevenLabs",
+  "text": "Small outdoor Spanish cafe ambience, soft distant indistinct conversation without any understandable words, occasional ceramic cup and saucer clink and a faint chair movement. Quiet natural seamless ambience, no music.",
+  "duration_seconds": 12,
+  "loop": true,
+  "prompt_influence": 0.65,
+  "model_id": "eleven_text_to_sound_v2"
+}

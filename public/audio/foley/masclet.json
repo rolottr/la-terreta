@@ -1,0 +1,8 @@
+{
+  "provider": "ElevenLabs",
+  "text": "One single powerful Valencian masclet firecracker explosion at the very start. A sharp dry crack with a deep chesty boom and a long outdoor plaza echo and rumbling decay. Exactly one bang, no fuse, no music, no speech.",
+  "duration_seconds": 1.4,
+  "loop": false,
+  "prompt_influence": 0.65,
+  "model_id": "eleven_text_to_sound_v2"
+}

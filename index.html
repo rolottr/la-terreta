@@ -1,0 +1,87 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover" />
+    <meta name="theme-color" content="#f4ecda" />
+    <title>La Terreta | Explore Valencia on a small 3D planet</title>
+    <meta name="description" content="Explore Valencia on a small 3D planet. Walk, cycle, ride the tram, and row across Albufera. Discover landmarks, join the Fallas band, and enjoy local activities in a browser game built with Three.js, TypeScript, and original Blender assets." />
+    <meta name="application-name" content="La Terreta" />
+    <meta name="author" content="rolottr" />
+    <meta name="robots" content="index, follow, max-image-preview:large" />
+    <link rel="canonical" href="https://la-terreta-nu.vercel.app/" />
+    <meta property="og:type" content="website" />
+    <meta property="og:site_name" content="La Terreta" />
+    <meta property="og:title" content="La Terreta | Explore Valencia on a small 3D planet" />
+    <meta property="og:description" content="Explore Valencia on a small 3D planet. Walk, cycle, ride the tram, and row across Albufera. Discover landmarks, join the Fallas band, and enjoy local activities in a browser game built with Three.js, TypeScript, and original Blender assets." />
+    <meta property="og:url" content="https://la-terreta-nu.vercel.app/" />
+    <meta property="og:locale" content="en_US" />
+    <meta property="og:image" content="https://la-terreta-nu.vercel.app/og-image.png" />
+    <meta property="og:image:type" content="image/png" />
+    <meta property="og:image:width" content="1280" />
+    <meta property="og:image:height" content="720" />
+    <meta property="og:image:alt" content="An explorer at Torres dels Serrans in La Terreta, with residents and Valenbisi bikes." />
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content="La Terreta | Explore Valencia on a small 3D planet" />
+    <meta name="twitter:description" content="Explore Valencia on a small 3D planet. Walk, cycle, ride the tram, and row across Albufera. Discover landmarks, join the Fallas band, and enjoy local activities in a browser game built with Three.js, TypeScript, and original Blender assets." />
+    <meta name="twitter:image" content="https://la-terreta-nu.vercel.app/og-image.png" />
+    <meta name="twitter:image:alt" content="An explorer at Torres dels Serrans in La Terreta, with residents and Valenbisi bikes." />
+    <script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "WebSite",
+      "@id": "https://la-terreta-nu.vercel.app/#website",
+      "name": "La Terreta",
+      "url": "https://la-terreta-nu.vercel.app/",
+      "description": "Explore Valencia on a small 3D planet. Walk, cycle, ride the tram, and row across Albufera. Discover landmarks, join the Fallas band, and enjoy local activities in a browser game built with Three.js, TypeScript, and original Blender assets.",
+      "inLanguage": [
+        "en",
+        "es",
+        "ca"
+      ]
+    },
+    {
+      "@type": "VideoGame",
+      "@id": "https://la-terreta-nu.vercel.app/#game",
+      "name": "La Terreta",
+      "url": "https://la-terreta-nu.vercel.app/",
+      "description": "Explore Valencia on a small 3D planet. Walk, cycle, ride the tram, and row across Albufera. Discover landmarks, join the Fallas band, and enjoy local activities in a browser game built with Three.js, TypeScript, and original Blender assets.",
+      "image": "https://la-terreta-nu.vercel.app/og-image.png",
+      "genre": [
+        "Exploration",
+        "Adventure"
+      ],
+      "gamePlatform": "Web browser",
+      "playMode": "SinglePlayer",
+      "inLanguage": [
+        "en",
+        "es",
+        "ca"
+      ],
+      "isAccessibleForFree": true,
+      "author": {
+        "@type": "Person",
+        "name": "rolottr",
+        "url": "https://github.com/rolottr"
+      },
+      "license": "https://github.com/rolottr/la-terreta/blob/main/LICENSE"
+    }
+  ]
+}
+    </script>
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+  </head>
+  <body>
+    <noscript><h1>La Terreta</h1><p>Explore Valencia on a small 3D planet. Walk, cycle, ride the tram, and row across Albufera. Discover landmarks, join the Fallas band, and enjoy local activities in a browser game built with Three.js, TypeScript, and original Blender assets.</p><p>Enable JavaScript and use a browser with WebGL 2 to play.</p></noscript>
+    <div id="app">
+      <canvas
+        id="world"
+        aria-label="Mundo interactivo de Valencia en tres dimensiones"
+      ></canvas>
+      <div id="ui"><div id="loading" role="status"><div class="orange-mark"><i></i></div><p>Preparing La Terreta…</p><span>People, streets, and a little music.</span></div></div>
+    </div>
+    <script type="module" src="/src/main.ts"></script>
+  </body>
+</html>

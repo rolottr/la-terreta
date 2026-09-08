@@ -1,0 +1,9 @@
+{
+  "provider": "ElevenLabs",
+  "song_id": "c6WomXaT1OLRhSMfjMoH",
+  "prompt": "An original cozy instrumental for a peaceful miniature Mediterranean city exploration game. Warm nylon-string guitar, very soft felt piano, a few delicate vibraphone notes, airy warm sustained strings. Unhurried 72 BPM, gentle major-key harmony, simple tender motif, spacious and understated. Feels like distant music drifting through a sunny Valencia street. Restrained dynamics, very sparse arrangement, no drums, no brass, no dramatic build, no vocals or voices. A continuous repeating background passage for looping, consistent texture from start to end, no intro or closing finale.",
+  "music_length_ms": 60000,
+  "force_instrumental": true,
+  "model_id": "music_v1",
+  "normalization": "FFmpeg loudnorm: -18 LUFS, -1.5 dBTP, LRA 8; MP3 44.1 kHz / 192 kbps"
+}

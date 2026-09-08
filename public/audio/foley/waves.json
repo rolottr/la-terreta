@@ -1,0 +1,8 @@
+{
+  "provider": "ElevenLabs",
+  "text": "Natural Mediterranean beach surf: successive soft waves roll onto sand, fizz and recede with detailed water wash. Spacious calm coast, seamless ambience, no voices, no music.",
+  "duration_seconds": 12,
+  "loop": true,
+  "prompt_influence": 0.65,
+  "model_id": "eleven_text_to_sound_v2"
+}

@@ -1,0 +1,8 @@
+{
+  "provider": "ElevenLabs",
+  "text": "A connected string of Valencian festival firecrackers ignites immediately: irregular sharp dry snaps and deeper cracking bangs accelerate into a dense rolling rattle, with a strong final bang and outdoor echo. Six seconds, no music, no voices.",
+  "duration_seconds": 6,
+  "loop": false,
+  "prompt_influence": 0.65,
+  "model_id": "eleven_text_to_sound_v2"
+}

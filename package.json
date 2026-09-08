@@ -1,0 +1,39 @@
+{
+  "name": "la-terreta",
+  "version": "1.0.0",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "dev": "vite --host 127.0.0.1",
+    "build": "tsc --noEmit && vite build",
+    "preview": "vite preview --host 127.0.0.1",
+    "check:movement": "node scripts/check_movement.mjs",
+    "check:wetland": "node scripts/check_wetland.mjs",
+    "check:immersion": "node scripts/check_immersion.mjs",
+    "check:assets": "node scripts/check_crafted_assets.mjs && node scripts/check_locomotion_assets.mjs",
+    "check:characters": "python3 scripts/check_character_export.py",
+    "check:compression": "node scripts/check_compression.mjs",
+    "check": "npm run check:movement && npm run check:wetland && npm run check:immersion && npm run check:assets && npm run check:characters"
+  },
+  "dependencies": {
+    "@fontsource/dm-sans": "^5.3.0",
+    "@fontsource/playfair-display": "^5.3.0",
+    "@vercel/analytics": "^2.0.1",
+    "polygon-clipping": "^0.15.7",
+    "three": "^0.180.0"
+  },
+  "devDependencies": {
+    "@types/three": "^0.180.0",
+    "esbuild": "^0.28.2",
+    "meshoptimizer": "0.22.0",
+    "sharp": "0.35.4",
+    "terser": "5.44.1",
+    "typescript": "^5.9.2",
+    "vite": "^7.1.4"
+  },
+  "description": "Explore Valencia on a small Mediterranean planet.",
+  "engines": {
+    "node": "24.x"
+  },
+  "license": "MIT"
+}

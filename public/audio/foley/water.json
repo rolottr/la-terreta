@@ -1,0 +1,8 @@
+{
+  "provider": "ElevenLabs",
+  "text": "Close gentle lake water lapping against a small wooden rowing boat. Soft irregular liquid ripples and little gurgles around the hull, calm open wetland, seamless stable ambience, no voices, no music, no engine.",
+  "duration_seconds": 8,
+  "loop": true,
+  "prompt_influence": 0.65,
+  "model_id": "eleven_text_to_sound_v2"
+}

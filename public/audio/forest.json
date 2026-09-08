@@ -1,0 +1,9 @@
+{
+  "provider": "ElevenLabs",
+  "song_id": "gPaiKRNPWQ541DuVXJhA",
+  "prompt": "An original cozy instrumental for walking through a quiet Mediterranean woodland and riverside garden in a miniature exploration game. Soft wooden flute, delicate fingerpicked acoustic guitar, warm harp harmonics and an airy string bed. Slow relaxed 68 BPM, gentle major pentatonic melody, peaceful, pastoral, curious and comforting. Sparse notes and lots of breathing room. No drums, no brass, no voices, no cinematic climax. A continuous repeating background passage for looping, stable soft dynamics and texture, no intro or closing finale.",
+  "music_length_ms": 60000,
+  "force_instrumental": true,
+  "model_id": "music_v1",
+  "normalization": "FFmpeg loudnorm: -18 LUFS, -1.5 dBTP, LRA 8; MP3 44.1 kHz / 192 kbps"
+}

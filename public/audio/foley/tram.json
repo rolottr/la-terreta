@@ -1,0 +1,8 @@
+{
+  "provider": "ElevenLabs",
+  "text": "A modern electric city tram running smoothly on rails, warm low electric motor hum, soft rhythmic rail contact and subtle suspension rattle. Clean realistic seamless vehicle ambience, no horn, no voices, no music.",
+  "duration_seconds": 8,
+  "loop": true,
+  "prompt_influence": 0.65,
+  "model_id": "eleven_text_to_sound_v2"
+}

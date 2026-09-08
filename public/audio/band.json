@@ -1,0 +1,9 @@
+{
+  "provider": "ElevenLabs",
+  "song_id": "JNQPirntSn3lG7nASBaH",
+  "prompt": "An original traditional Spanish concert-band pasodoble in the early twentieth-century Valencian style. Proud lyrical minor-key melody, bold trumpet unisons answered by fluent clarinet runs, warm euphonium and trombone countermelodies, steady tuba bass, crisp snare rolls, bass drum and restrained cymbal accents. Strong two-beat march at 112 BPM, elegant dramatic opening phrase and a broad singing major-key trio. Rich acoustic wind band with natural room resonance, full but unhurried, the character of a real banda playing in a Valencian plaza. No dolcaina lead, guitars, piano, synthesizers, vocals, crowd, polka, circus or military fanfare. Original melody, no quotation of an existing composition. Continuous music suitable for a game loop, no fade out.",
+  "music_length_ms": 60000,
+  "force_instrumental": true,
+  "model_id": "music_v2",
+  "normalization": "FFmpeg loudnorm: -18 LUFS, -1.5 dBTP, LRA 8; MP3 44.1 kHz / 192 kbps"
+}

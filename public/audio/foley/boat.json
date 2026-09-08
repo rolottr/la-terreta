@@ -1,0 +1,8 @@
+{
+  "provider": "ElevenLabs",
+  "text": "One close natural wooden rowing oar stroke: blade enters lake water immediately, pulls with a rich gentle watery swish and small gurgle, then lifts with droplets. One stroke, no engine, no voices, no music.",
+  "duration_seconds": 1.1,
+  "loop": false,
+  "prompt_influence": 0.65,
+  "model_id": "eleven_text_to_sound_v2"
+}

@@ -1,0 +1,13 @@
+{
+  "source": "Original game sound effects generated with ElevenLabs",
+  "generator": "scripts/generate_elevenlabs_sounds.py",
+  "sampleRate": 44100,
+  "metadata": "Each active sound has its prompt and duration in the adjacent JSON file.",
+  "unusedLegacyFiles": [
+    "stone.flac",
+    "wood.flac",
+    "sand.flac",
+    "splash.flac"
+  ],
+  "footsteps": "Disabled in the game."
+}

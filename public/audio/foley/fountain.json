@@ -1,0 +1,8 @@
+{
+  "provider": "ElevenLabs",
+  "text": "A small stone courtyard fountain, clear flowing streams splashing into a shallow pool, detailed delicate droplets and continuous water trickle. Seamless natural ambience, no music or speech.",
+  "duration_seconds": 8,
+  "loop": true,
+  "prompt_influence": 0.65,
+  "model_id": "eleven_text_to_sound_v2"
+}

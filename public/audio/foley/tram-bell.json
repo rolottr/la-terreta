@@ -1,0 +1,8 @@
+{
+  "provider": "ElevenLabs",
+  "text": "A modern European street tram warning bell: two clear metallic ding ding chimes with a short natural ringing decay. No other sounds.",
+  "duration_seconds": 2,
+  "loop": false,
+  "prompt_influence": 0.65,
+  "model_id": "eleven_text_to_sound_v2"
+}

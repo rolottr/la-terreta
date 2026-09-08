@@ -1,0 +1,8 @@
+{
+  "provider": "ElevenLabs",
+  "text": "A calm friendly bull makes one soft low contented nasal huff and breathes through its nose while being petted. Close natural animal sound, gentle, no aggressive roar, no speech, no music.",
+  "duration_seconds": 2.5,
+  "loop": false,
+  "prompt_influence": 0.65,
+  "model_id": "eleven_text_to_sound_v2"
+}

@@ -1,0 +1,90 @@
+{
+  "station": {
+    "image": "/art/places/station.jpg",
+    "wiki": "https://en.wikipedia.org/wiki/Estaci%C3%B3_del_Nord_(Valencia)",
+    "credit": "Diego Delso",
+    "license": "CC BY-SA 4.0",
+    "source": "https://commons.wikimedia.org/wiki/File:Estaci%C3%B3n_del_Norte%2C_Valencia%2C_Espa%C3%B1a%2C_2014-06-30%2C_DD_122.JPG",
+    "originalImage": "https://upload.wikimedia.org/wikipedia/commons/thumb/8/87/Estaci%C3%B3n_del_Norte%2C_Valencia%2C_Espa%C3%B1a%2C_2014-06-30%2C_DD_122.JPG/960px-Estaci%C3%B3n_del_Norte%2C_Valencia%2C_Espa%C3%B1a%2C_2014-06-30%2C_DD_122.JPG"
+  },
+  "townhall": {
+    "image": "/art/places/townhall.jpg",
+    "wiki": "https://es.wikipedia.org/wiki/Plaza_del_Ayuntamiento_(Valencia)",
+    "credit": "Demiannnn",
+    "license": "CC BY-SA 2.5",
+    "source": "https://commons.wikimedia.org/wiki/File:Plaza_del_Ayuntamiento_de_Valencia.JPG",
+    "originalImage": "https://upload.wikimedia.org/wikipedia/commons/thumb/6/60/Plaza_del_Ayuntamiento_de_Valencia.JPG/960px-Plaza_del_Ayuntamiento_de_Valencia.JPG"
+  },
+  "serranos": {
+    "image": "/art/places/serranos.jpg",
+    "wiki": "https://en.wikipedia.org/wiki/Torres_de_Serranos",
+    "credit": "Diego Delso",
+    "license": "CC BY-SA 4.0",
+    "source": "https://commons.wikimedia.org/wiki/File:Puerta_de_los_Serranos%2C_Valencia%2C_Espa%C3%B1a%2C_2014-06-30%2C_DD_86.JPG",
+    "originalImage": "https://upload.wikimedia.org/wikipedia/commons/thumb/7/72/Puerta_de_los_Serranos%2C_Valencia%2C_Espa%C3%B1a%2C_2014-06-30%2C_DD_86.JPG/960px-Puerta_de_los_Serranos%2C_Valencia%2C_Espa%C3%B1a%2C_2014-06-30%2C_DD_86.JPG"
+  },
+  "oldtown": {
+    "image": "/art/places/oldtown.jpg",
+    "wiki": "https://es.wikipedia.org/wiki/Ciutat_Vella_(Valencia)",
+    "credit": "Felivet",
+    "license": "Public domain",
+    "source": "https://commons.wikimedia.org/wiki/File:Ciutat_vella_vista.jpg",
+    "originalImage": "https://upload.wikimedia.org/wikipedia/commons/thumb/1/1e/Ciutat_vella_vista.jpg/960px-Ciutat_vella_vista.jpg"
+  },
+  "aqua": {
+    "image": "/art/places/aqua.jpg",
+    "wiki": "https://en.wikipedia.org/wiki/Aqua_Multiespacio",
+    "credit": "Cabanyalvlc",
+    "license": "CC BY 3.0",
+    "source": "https://commons.wikimedia.org/wiki/File:Valencia04.jpg",
+    "originalImage": "https://upload.wikimedia.org/wikipedia/commons/thumb/1/13/Valencia04.jpg/960px-Valencia04.jpg"
+  },
+  "bullring": {
+    "image": "/art/places/bullring.jpg",
+    "wiki": "https://en.wikipedia.org/wiki/Plaza_de_Toros_de_Valencia",
+    "credit": "Diego Delso",
+    "license": "CC BY-SA 3.0",
+    "source": "https://commons.wikimedia.org/wiki/File:Plaza_de_toros%2C_Valencia%2C_Espa%C3%B1a%2C_2014-06-30%2C_DD_126.JPG",
+    "originalImage": "https://upload.wikimedia.org/wikipedia/commons/thumb/f/f5/Plaza_de_toros%2C_Valencia%2C_Espa%C3%B1a%2C_2014-06-30%2C_DD_126.JPG/960px-Plaza_de_toros%2C_Valencia%2C_Espa%C3%B1a%2C_2014-06-30%2C_DD_126.JPG"
+  },
+  "science": {
+    "image": "/art/places/science.jpg",
+    "wiki": "https://es.wikipedia.org/wiki/Ciudad_de_las_Artes_y_las_Ciencias",
+    "credit": "Diliff",
+    "license": "CC BY-SA 3.0",
+    "source": "https://commons.wikimedia.org/wiki/File:Hemispheric_Twilight_-_Valencia%2C_Spain_-_Jan_2007.jpg",
+    "originalImage": "https://upload.wikimedia.org/wikipedia/commons/thumb/4/40/Hemispheric_Twilight_-_Valencia%2C_Spain_-_Jan_2007.jpg/960px-Hemispheric_Twilight_-_Valencia%2C_Spain_-_Jan_2007.jpg"
+  },
+  "beach": {
+    "image": "/art/places/beach.jpg",
+    "wiki": "https://es.wikipedia.org/wiki/Dehesa_del_Saler",
+    "credit": "Espencat",
+    "license": "Public domain",
+    "source": "https://commons.wikimedia.org/wiki/File:Devesa_del_saler.jpg",
+    "originalImage": "https://upload.wikimedia.org/wikipedia/commons/thumb/a/a4/Devesa_del_saler.jpg/960px-Devesa_del_saler.jpg"
+  },
+  "turia": {
+    "image": "/art/places/turia.jpg",
+    "wiki": "https://es.wikipedia.org/wiki/Jard%C3%ADn_del_Turia",
+    "credit": "Joanbanjo",
+    "license": "CC BY-SA 3.0",
+    "source": "https://commons.wikimedia.org/wiki/File:Jard%C3%AD_del_T%C3%BAria_de_Val%C3%A8ncia%2C_riuet.JPG",
+    "originalImage": "https://upload.wikimedia.org/wikipedia/commons/thumb/e/e2/Jard%C3%AD_del_T%C3%BAria_de_Val%C3%A8ncia%2C_riuet.JPG/960px-Jard%C3%AD_del_T%C3%BAria_de_Val%C3%A8ncia%2C_riuet.JPG"
+  },
+  "university": {
+    "image": "/art/places/university.jpg",
+    "wiki": "https://en.wikipedia.org/wiki/La_Nau",
+    "credit": "Felivet",
+    "license": "Public domain",
+    "source": "https://commons.wikimedia.org/wiki/File:Universitat_val%C3%A8ncia_vella.jpg",
+    "originalImage": "https://upload.wikimedia.org/wikipedia/commons/thumb/5/5a/Universitat_val%C3%A8ncia_vella.jpg/960px-Universitat_val%C3%A8ncia_vella.jpg"
+  },
+  "albufera": {
+    "image": "/art/places/albufera.jpg",
+    "wiki": "https://en.wikipedia.org/wiki/Albufera_de_Val%C3%A8ncia",
+    "credit": "Joseaperez",
+    "license": "CC BY-SA 3.0",
+    "source": "https://commons.wikimedia.org/wiki/File:Albuf.JPG",
+    "originalImage": "https://upload.wikimedia.org/wikipedia/commons/thumb/a/a8/Albuf.JPG/960px-Albuf.JPG"
+  }
+}
